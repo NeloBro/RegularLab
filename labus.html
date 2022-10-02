@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>regular</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Введите строку");
+        var regexp = /\b\S+?\b/g;
+        var str = a.match(regexp);
+        var dif = [];
+        for (let i = 0; i < str.length; i++) {
+            for(let j = 0;j < i; j++) {
+                if(str[j]===str[i]) {
+                    dif.push(str[i]);
+                }
+            }
+        }
+        document.write("Совпадения:<br>");
+        for (let i = 0; i < dif.length; i++) {
+            document.write(dif[i]+"<br>");
+        }
+    </script>
+</body>
+</html>
